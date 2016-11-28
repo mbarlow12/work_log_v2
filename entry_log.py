@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
 
+"""TODO:
+
+1) Split distinct classes/refactor for more efficient code reuse
+2) Create Test suite for coverage
+"""
+
 from collections import OrderedDict
 import datetime
 
@@ -56,17 +62,6 @@ class Entry(BaseModel):
             val_list = reversed([int(val) for val in date_str.split('/')])
 
             self._date = datetime.date(*val_list)
-
-    """
-    @property
-    def duration(self):
-        return self._end_ts - self._start_ts
-    
-    @duration.setter
-    def duration(self, minutes):
-        duration = datetime.timedelta(minutes=int(minutes))
-        self._end_ts = self._start_ts + duration
-    """
 
 def initialize():
     db.connect()

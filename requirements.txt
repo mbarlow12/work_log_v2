@@ -1,1 +1,2 @@
+coverage==4.2
 peewee==2.8.5
